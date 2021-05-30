@@ -59,6 +59,7 @@ repos:
   hooks:
     - id: terraform_fmt
     - id: terraform_docs
+    - id: terraform_validate
 EOF
 ```
 
