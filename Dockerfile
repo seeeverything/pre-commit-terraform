@@ -1,7 +1,7 @@
 FROM python:alpine3.13
 
 ARG PRE_COMMIT_VERSION="2.11.1"
-ARG TERRAFORM_VERSION="0.15.4"
+ARG TERRAFORM_VERSION="0.13.7"
 ARG TFSEC_VERSION="v0.39.21"
 ARG TERRAFORM_DOCS_VERSION="v0.12.0"
 ARG TFLINT_VERSION="v0.27.0"
@@ -9,7 +9,7 @@ ARG CHECKOV_VERSION="1.0.838"
 ARG TERRASCAN_VERISON="1.6.0"
 
 # Install general dependencies
-RUN apk add --no-cache curl git gawk unzip gnupg
+RUN apk add --no-cache curl git gawk unzip gnupg bash
 
 # Install tools
 RUN pip install pre-commit==${PRE_COMMIT_VERSION} && \
